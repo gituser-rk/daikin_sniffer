@@ -9,7 +9,7 @@ DaikinSniffer = daikin_ns.class_("DaikinSniffer", cg.Component, uart.UARTDevice)
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id(DaikinSniffer),
     cv.Required(CONF_UART_ID): cv.use_id(uart.UARTComponent),
-})
+}).extend(cv.COMPONENT_SCHEMA).extend(uart.UART_DEVICE_SCHEMA)
 
 async def to_code(config):
     uart_component = await cg.get_variable(config[CONF_UART_ID])
