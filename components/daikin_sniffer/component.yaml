@@ -1,4 +1,0 @@
-name: daikin_sniffer
-files:
-  - daikin_sniffer.h
-  - daikin_sniffer.cpp
