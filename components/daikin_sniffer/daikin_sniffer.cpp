@@ -7,6 +7,7 @@ DaikinSniffer::DaikinSniffer(esphome::uart::UARTComponent *parent)
 
 void DaikinSniffer::setup() {
   sensor->set_name("Daikin Raw Frame");
+  App.register_text_sensor(sensor);
 }
 
 void DaikinSniffer::loop() {
