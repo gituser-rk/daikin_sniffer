@@ -6,9 +6,9 @@ namespace daikin_sniffer {
 static const char *TAG = "daikin_sniffer";
 
 DaikinSniffer::DaikinSniffer(esphome::uart::UARTComponent *parent)
-    : esphome::uart::UARTDevice(parent) {
-  // optional: initialisierung
+    : esphome::Component(), esphome::uart::UARTDevice(parent) {
 }
+
 
 void DaikinSniffer::setup() {
   ESP_LOGI(TAG, "Daikin sniffer initialized");
